@@ -1,0 +1,117 @@
+@charset "utf-8";
+@import url('iconfont/newfont/style.css');
+
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@font-face {font-family:'Malgun Gothic';src:url('./font/MalgunGothic.eot');}
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+[class*="gmarket"]{line-height:1.2em}
+.gmarket-bold{font-family: 'GmarketSansBold';}
+.gmarket{font-family: 'GmarketSansMedium';}
+.gmarket-light{font-family: 'GmarketSansLight';}
+
+[class^="nanumSR"], [class*="nanumSR"]{font-family:'NanumSquareRound', sans-serif;}
+[class^="nanumSQ"], [class*="nanumSQ"]{font-family:'NanumSquare', sans-serif;}
+.nanumSQ300{font-weight:300;} .nanumSQ400{font-weight:400;} .nanumSQ700{font-weight:700;} .nanumSQ800{font-weight:800;}
+[class^="noto"], [class*="noto"]{font-family:'Noto Sans KR', sans-serif;}
+.noto100{font-weight:100 !important;} .noto200{font-weight:200 !important;} .noto300{font-weight:300 !important;} .noto400{font-weight:400;} .noto500{font-weight:500 !important;}
+.noto600{font-weight:600 !important;} .noto700{font-weight:700 !important;}
+[class^="hansan"]{font-family:'Black Han Sans', sans-serif;}
+[class*='malgun']{font-family:'맑은 고딕', 'Malgun Gothic', sans-serif;letter-spacing:-0.05em}
+.malgun200{font-weight:200 !important;}.malgun300{font-weight:300 !important;}.malgun400{font-weight:400 !important;}.malgun500{font-weight:500 !important;}.malgun600{font-weight:600 !important;}
+.malgun700{font-weight:700 !important;}.malgun800{font-weight:800 !important;}
+
+html,h1,h2,h3,h4,h5,h6,form,fieldset,img{margin:0;padding:0;border:0}
+h1,h2,h3,h4,h5,h6{font-size:1em;margin:0;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+#hd ul,nav ul,#ft ul{margin:0;padding:0;list-style:none}
+legend{position:absolute;font-size:0;line-height:0;text-indent:-9999em;overflow:hidden}
+label,input,button,select,img{vertical-align:middle;}
+input,button{margin:0;padding:0;font-size:1em}
+button{cursor:pointer}
+input[type=text],input[type=password],input[type=submit],input[type=image],button{border:0;-webkit-appearance:none}
+textarea,select{font-size:1em;}
+textarea{-webkit-appearance:none;-webkit-overflow-scrolling:touch;width:100%;}
+select{margin:0}
+p{margin:0;padding:0;word-break:break-all}
+hr{width:100%;height:1px;background-color:rgba(0,0,0,0.12);border:none;}
+pre{overflow-x:scroll;font-size:1.1em}
+ul,li{margin:0;padding:0;list-style:none;}
+sub{vertical-align:middle;}
+table,tr,th,td{border-collapse:collapse;border-spacing:0;}
+body{/*-webkit-user-select:none;*/-webkit-tap-highlight-color:rgba(0,0,0,0)}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-text-size-adjust:none;/*피봇시 글자커짐 방지 */-webkit-overflow-scrolling:touch;}
+*:before{font-weight:normal;}
+a{color:#090909;color:inherit;}
+a:link,a:visited{text-decoration:none}
+a:focus, textarea:focus, select:focus, input:focus, button:focus{outline:0;}
+a:hover,a:focus,a:active{text-decoration:none}
+.bold{font-weight:700;}
+
+html, body{font-family:'NanumSquare', sans-serif;}
+
+html.scrollDisable{height:100%;min-height:100%;overflow:hidden !important;touch-action:none;}
+
+/*──────────────── flex ────────────────*/
+.flex{display:flex;}
+.inline-flex{display:inline-flex;}
+.flex.column, .inline-flex.column{flex-direction:column;}
+.flex-top{align-items:flex-start;}
+.flex-middle{align-items:center;}
+.flex-bottom{align-items:flex-end;}
+.flex-left{justify-content:flex-start;}
+.flex-center{justify-content:center;}
+.flex-right{justify-content:flex-end;}
+.flex-stretch{align-items:stretch;}
+.flex1{flex:1;}
+.flex > .left{margin-right:auto;}.flex > .right{margin-left:auto;}
+.item-top{align-self:start}.item-middle{align-self:center;}.item-bottom{align-self:end}.item-stretch{align-self:stretch}.item-left{margin-right:auto;}.item-right{margin-left:auto;}
+
+/*──────────────── common ────────────────*/
+.tcenter{text-align:center !important;}
+.tleft{text-align:left !important;}
+.tright{text-align:right:left !important;}
+.center{margin-left:auto;margin-right:auto}
+.none{display:none}
+.bored{border:1px solid red;}
+.color-red{color:#EF3434}
+
+:root{
+	--mainColor:#089988; /* rgba(149,78,252,1); */	
+	--blue:#504CBD;
+	--green:rgba(8,153,136,1);
+	--red:#f56b6b;
+	--gray:#6c757d;
+	--gray1:#6c757d;
+	--gray2:#6c757d;
+	--gray3:#bbb;
+	--gradient1:#BF65FB;
+	--gradient-blue:#6097FF 0%, #4829FD 100%;
+	--gradient-green:#0A8F9D 0%, #05BA68 100%;
+}
+
+::-webkit-scrollbar{width:6px;height:6px;border-radius:2px;}
+::-webkit-scrollbar-thumb{cursor:pointer;background:#c5c5c5;border-radius:2px;}
+::selection{background-color:#c5c5c5;color:#fff;border-radius:2px;}
+-webkit-::selection{background-color:#c5c5c5;color:#fff;border-radius:2px;}
+::-moz-selection{background-color:#c5c5c5;color:#fff;border-radius:2px;}
