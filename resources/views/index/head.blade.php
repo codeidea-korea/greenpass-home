@@ -1,6 +1,12 @@
 @php
 $mAgent = array("iPhone", "iPod", "Android", "Blackberry", "Opera Mini", "Windows ce", "Nokia", "sony" );
 $chkMobile = false;
+
+if(isset($_GET['view_type'])) {
+	$viewType = $_GET['view_type'];
+	if($viewType == 'mobile') $chkMobile = true;
+}
+
 for($i=0; $i<sizeof($mAgent); $i++){
     if(stripos( $_SERVER['HTTP_USER_AGENT'], $mAgent[$i] )){
         $chkMobile = true;
@@ -27,19 +33,6 @@ function get_url($url) {
 	<link href="{{ asset('js/magnific-popup/magnific-popup.css')}}" rel="stylesheet">
 	<link href="{{ asset('js/swiper/swiper.min.css')}}"  rel='stylesheet' type='text/css'>
 	<link href="{{ asset('css/root.css')}}" rel='stylesheet' type='text/css'>
-	@php
-	if($chkMobile) {
-		@endphp
-		<link href="{{ asset('js/form/myform_mobile.css')}}" rel="stylesheet" type="text/css">
-		<link href="{{ asset('css/mobile.css')}}" rel="stylesheet" type="text/css">
-		@php
-	} else {
-		@endphp
-		<link href="{{ asset('js/form/myform.css')}}" rel="stylesheet" type="text/css">
-		<link href="{{ asset('css/style.css')}}" rel="stylesheet" type="text/css">
-		@php
-	}
-	@endphp
 	<!--<script src='{{ asset('js/jquery.min.js')}}' type='text/javascript'></script>-->
 	<script src="{{ asset('js/jquery-3.6.0.min.js')}}"></script>
 	<script src="{{ asset('js/wow/wow.js')}}"></script>
@@ -48,49 +41,69 @@ function get_url($url) {
 	<script src="{{ asset('js/swiper/swiper.min.js')}}"></script>
 	<script src="{{ asset('js/form/myform.js')}}"></script>
 	<script src="{{ asset('js/myScript.js')}}"></script>
-	@php
-	if($chkMobile) {
-		@endphp
-		<script src="{{ asset('js/myScript_mobile.js')}}"></script>
-		@php
-	} else {
-		@endphp
-		<script src="{{ asset('js/myScript_pc.js')}}"></script>
-		@php
-	}
-	@endphp
+	<script>
+	var device;
+      if($(window).width()<1000){// 모바일 UI
+         device = 'mobile';
+      }else{// PC UI
+         device = 'pc';
+      }
+      $(window).resize(function(){
+         if($(window).width()<1000){// 모바일 UI
+            location.reload();
+         }else{// PC UI
+         }
+      });
+	  $(document).ready(function(){
+         if(device=='mobile'){// 모바일 UI
+            $('.pc_view').hide();
+            $('.mobile_view').show();
+         }else{// PC UI
+            $('.pc_view').show();
+            $('.mobile_view').hide();
+         }
+      });
+   </script>
 </head>
 <body>
 
 
+<script>
+      if(device=='mobile'){// 모바일 UI
+         document.write( '<link href="/js/form/myform_mobile.css" rel="stylesheet" type="text/css">');
+         document.write( '<link href="/css/mobile.css" rel="stylesheet" type="text/css">');
+      }else{// PC UI
+         document.write( '<link href="/js/form/myform.css" rel="stylesheet" type="text/css">');
+         document.write( '<link href="/css/style.css" rel="stylesheet" type="text/css">');
+	  }
+   </script>
+   <script src="/js/myScript_mobile.js"></script>
+   <script src="/js/myScript_pc.js"></script>
 <div id="page-wrapper">
 
 	<header id="header">
 		<div class="headerContainer">
 			<div class="header-top">
 				<a href="/" class="top-logo">
-				@php
-				if($chkMobile) {
-					echo '<img src="/img/logo_mobile.png"></a>';
-				} else {
-					echo '<img src="/img/logo.png"></a>';
-				}
-				@endphp
-				@php
-				if($chkMobile) {
-					echo '<a href="#" class="downloader"></a>';
-					echo '<span class="openner"></span>';
-				}
-				@endphp
+					<script>
+						if(device=='mobile'){// 모바일 UI
+							document.write( '<img class="mobile_view" src="/img/logo_mobile.png">');
+							document.write( '<a href="#" class="downloader"></a>');
+							document.write( '<span class="openner"></span>');
+						}else{// PC UI
+							document.write( '<img class="pc_view" src="/img/logo.png">');
+						}
+					</script>
+				</a>
 			</div>
 			
 			<div class="inner">
-				@php
-				if($chkMobile) {
-					echo '<span class="closer"></span>';
-					echo '<img src="/img/header-inner-logo.png" class="inner-logo">';
-				}
-				@endphp
+				<script>
+					if(device=='mobile'){// 모바일 UI
+						document.write( '<span class="closer"></span>');
+						document.write( '<img src="/img/header-inner-logo.png" class="inner-logo">');
+					}
+				</script>
 
 				<nav class="nav">
 					<ul>

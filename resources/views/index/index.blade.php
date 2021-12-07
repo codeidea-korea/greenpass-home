@@ -9,9 +9,11 @@ $chkMobile = false;
 <section class="main-top">
 	<div class="container @php echo !$chkMobile?'flex flex-middle':''; @endphp">
 		<div class="left wow fadeInRight" data-wow-duration="1s" data-wow-delay="0s">
-			@php 
-				if(!$chkMobile) echo '<img src="/img/img-logo.png">'; 
-			@endphp
+			<script>
+				if(device!='mobile'){// 모바일 UI
+					document.write( '<img src="/img/img-logo.png">');
+				}
+			</script>
 			<p class="gmarket-bold text-shadow fs59 fsm38 mt30">일상으로 돌아가는<br>가장 빠른 인증</p>
 			<p>1초면 끝! 여러 명 동시 출입인증<br>GPS, NFC 기반 전자출입명부 그린패스</p>
 			<div class="mt40 mtm15 flex flex-middle btnSet">
@@ -67,7 +69,13 @@ $chkMobile = false;
 				</li>
 			</ul>
 			<ul class="greenpass-list">
-				<li class="wow <?=!$chkMobile?'fadeInUp':'fadeInScale'?>" data-wow-duration="1s" data-wow-delay="0s">
+				<script>
+					if(device=='mobile'){// 모바일 UI
+						document.write( '<li class="wow fadeInScale" data-wow-duration="1s" data-wow-delay="0s">');
+					}else{
+						document.write( '<li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">');
+					}
+				</script>
 					<img src="{{ asset('img/store01.png')}}">
 					<div class="text">
 						<p class="subject">스타벅스<sub>(양평점)</sub></p>
@@ -75,7 +83,13 @@ $chkMobile = false;
 					</div>
 					<span class="tag">인증완료</span>
 				</li>
-				<li class="wow <?=!$chkMobile?'fadeInUp':'fadeInScale'?>" data-wow-duration="1s" data-wow-delay="0.2s">
+				<script>
+					if(device=='mobile'){// 모바일 UI
+						document.write( '<li class="wow fadeInScale" data-wow-duration="1s" data-wow-delay="0.2s">');
+					}else{
+						document.write( '<li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">');
+					}
+				</script>
 					<img src="{{ asset('img/store02.png')}}">
 					<div class="text">
 						<p class="subject">맥도날드<sub>(안양비산DT점)</sub></p>
@@ -240,11 +254,21 @@ $chkMobile = false;
 	</div>
 </section>
 
-<section class="main-bl07" style="background:url('/img/@php echo !$chkMobile?'main-bl07-bg.png':'main-bl07-bg-mobile.png'; @endphp') no-repeat center / cover;">
+<script>
+	if(device=='mobile'){// 모바일 UI
+		document.write( '<section class="main-bl07" style="background:url(\'/img/main-bl07-bg-mobile.png\') no-repeat center / cover;">');
+	}else{
+		document.write( '<section class="main-bl07" style="background:url(\'/img/main-bl07-bg.png\') no-repeat center / cover;">');
+	}
+</script>
+
 	<div class="container mt200 mb200">
 		<h2 class="gmarket-bold fs59 mb10 fsm25 mbm10">1초면 끝! 출입인증<br>통합 솔루션 그린패스</h2>
 		<p style="line-height:1.3em">빠르고 정확한 출입인증 통합 솔루션 그린패스<br>정부, 소상공인, 시민들의 짐을 덜어드립니다.</p>
 	</div>
-</section>
+<script>
+	document.write( '</section>');
+</script>
+
 
 @include('index.footer')
