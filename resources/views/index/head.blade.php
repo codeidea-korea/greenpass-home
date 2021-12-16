@@ -28,11 +28,32 @@ function get_url($url) {
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi">
 	<title>greenpass</title>
 	<link rel="apple-touch-icon" href="{{ asset('img/favorite/favorite_mobile.png')}}" />
+</head>
+<body>
+
+
 	<link href="{{ asset('css/iconfont/greenpass-icon/style.css') }}" rel='stylesheet' type='text/css'>
 	<link href="{{ asset('css/animate.css') }}" rel='stylesheet' type='text/css'>
 	<link href="{{ asset('js/magnific-popup/magnific-popup.css')}}" rel="stylesheet">
 	<link href="{{ asset('js/swiper/swiper.min.css')}}"  rel='stylesheet' type='text/css'>
 	<link href="{{ asset('css/root.css')}}" rel='stylesheet' type='text/css'>
+	<script>
+	var device;
+      if(window.innerWidth<1000){// 모바일 UI
+         device = 'mobile';
+      }else{// PC UI
+         device = 'pc';
+      }
+   </script>
+	<script>
+      if(device=='mobile'){// 모바일 UI
+         document.write( '<link href="/js/form/myform_mobile.css" rel="stylesheet" type="text/css">');
+         document.write( '<link href="/css/mobile.css" rel="stylesheet" type="text/css">');
+      }else{// PC UI
+         document.write( '<link href="/js/form/myform.css" rel="stylesheet" type="text/css">');
+         document.write( '<link href="/css/style.css" rel="stylesheet" type="text/css">');
+	  }
+   </script>
 	<!--<script src='{{ asset('js/jquery.min.js')}}' type='text/javascript'></script>-->
 	<script src="{{ asset('js/jquery-3.6.0.min.js')}}"></script>
 	<script src="{{ asset('js/wow/wow.js')}}"></script>
@@ -41,17 +62,14 @@ function get_url($url) {
 	<script src="{{ asset('js/swiper/swiper.min.js')}}"></script>
 	<script src="{{ asset('js/form/myform.js')}}"></script>
 	<script src="{{ asset('js/myScript.js')}}"></script>
+   <script src="/js/myScript_mobile.js"></script>
+   <script src="/js/myScript_pc.js"></script>
 	<script>
-	var device;
-      if($(window).width()<1000){// 모바일 UI
-         device = 'mobile';
-      }else{// PC UI
-         device = 'pc';
-      }
       $(window).resize(function(){
-         if($(window).width()<1000){// 모바일 UI
+		 if($(window).width() < 1000 && device != 'mobile'){// 모바일 UI
             location.reload();
-         }else{// PC UI
+         }else if ($(window).width() > 1000 && device != 'pc'){// PC UI
+            location.reload();
          }
       });
 	  $(document).ready(function(){
@@ -64,21 +82,6 @@ function get_url($url) {
          }
       });
    </script>
-</head>
-<body>
-
-
-<script>
-      if(device=='mobile'){// 모바일 UI
-         document.write( '<link href="/js/form/myform_mobile.css" rel="stylesheet" type="text/css">');
-         document.write( '<link href="/css/mobile.css" rel="stylesheet" type="text/css">');
-      }else{// PC UI
-         document.write( '<link href="/js/form/myform.css" rel="stylesheet" type="text/css">');
-         document.write( '<link href="/css/style.css" rel="stylesheet" type="text/css">');
-	  }
-   </script>
-   <script src="/js/myScript_mobile.js"></script>
-   <script src="/js/myScript_pc.js"></script>
 <div id="page-wrapper">
 
 	<header id="header">

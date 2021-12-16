@@ -7,18 +7,20 @@ $chkMobile = false;
 @include('index.head')
 
 <section class="main-top">
-	<div class="container @php echo !$chkMobile?'flex flex-middle':''; @endphp">
+	<div class="container">
 		<div class="left wow fadeInRight" data-wow-duration="1s" data-wow-delay="0s">
 			<script>
 				if(device!='mobile'){// 모바일 UI
 					document.write( '<img src="/img/img-logo.png">');
+					$('.main-top > .container').addClass('flex');
+					$('.main-top > .container').addClass('flex-middle');
 				}
 			</script>
 			<p class="gmarket-bold text-shadow fs59 fsm38 mt30">일상으로 돌아가는<br>가장 빠른 인증</p>
 			<p>1초면 끝! 여러 명 동시 출입인증<br>GPS, NFC 기반 전자출입명부 그린패스</p>
 			<div class="mt40 mtm15 flex flex-middle btnSet">
-				<a href="#"><img src="{{ asset('img/btn_app01.png')}}"></a>
-				<a href="#" class="ml20 mlm10"><img src="{{ asset('img/btn_app02.png')}}"></a>
+				<a href="https://play.google.com/store/apps/details?id=com.greenpassapp"><img src="{{ asset('img/btn_app01.png')}}"></a>
+				<a href="https://apps.apple.com/us/app/%EA%B7%B8%EB%A6%B0%ED%8C%A8%EC%8A%A4-greenpassapp-%EA%B0%84%ED%8E%B8-%EC%9D%B8%EC%A6%9D-%EC%8B%9C%EC%8A%A4%ED%85%9C/id1596006363" class="ml20 mlm10"><img src="{{ asset('img/btn_app02.png')}}"></a>
 			</div>
 		</div>
 		<div class="right wow fadeInLeft mtm40" data-wow-duration="1s" data-wow-delay="0.2s">

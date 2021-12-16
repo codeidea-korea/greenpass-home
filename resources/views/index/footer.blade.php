@@ -16,10 +16,10 @@
 				<span>COPYRIGHT © 주식회사 그린패스코리아 ALL RIGHTS RESERVED.</span>
 			</div>
 			<div class="snsSet">
-				<a href="#" class="insta">insta</a>
-				<a href="#" class="youtube">insta</a>
-				<a href="#" class="facebook">facebook</a>
-				<a href="#" class="naver">naver</a>
+				<a href="https://www.instagram.com/greenpasskorea/" class="insta">insta</a>
+				<a href="https://www.youtube.com/channel/UCSaI-ha5rLMDlIt4U7ZZhhQ" class="youtube">youtube</a>
+				<a href="https://www.facebook.com/greenpasskorea/" class="naver">facebook</a>
+				<a href="#" class="facebook">naver</a>
 			</div>
 		</div>
 	</footer>
