@@ -113,7 +113,6 @@ img{max-width:100%;}
 .main-bl01 .greenpass-list li .text .date{font-size:14px;font-weight:200;color:#747474;}
 .main-bl01 .greenpass-list li .tag{margin-left:auto;border-radius:50px;font-size:13px;font-weight:400;color:#fff;background:#3281F7;height:30px;padding:0 13px;display:inline-flex;align-items:center;justify-content:center;}
 
-
 .main-bl01 .img{position:relative;height:500px;margin-top:50px;order:2;width:100%;text-align:center;}
 .main-bl01 .img img{position:absolute;z-index:2;top:0;left:50%;margin-left:-290px;width:580px;max-width:580px;}
 .main-bl01 .img span{position:absolute;top:50%;left:50%;z-index:0;background:#59d8bd;display:block;width:200px;height:200px;margin-top:-100px;margin-left:-100px;border-radius:50%;}
@@ -136,7 +135,6 @@ img{max-width:100%;}
 	100% {opacity:0;transform:scale(2.5);}
 }
 
-
 .main-bl02 [class*='layer-img']{position:absolute;z-index:3;}
 .main-bl02 .container img:first-child{width:100%;}
 .main-bl02 .layer-img01{top:50%;left:50%;margin-left:-16%;margin-top:-22%;width:32%}
@@ -144,8 +142,6 @@ img{max-width:100%;}
 .main-bl02 .layer-img03{top:50%;right:-3.5%;margin-top:-23%;width:38%;}
 .main-bl02 .layer-img04{bottom:-2%;left:50%;margin-left:-24%;width:48%;}
 .main-bl02 .layer-img05{top:50%;left:-1%;margin-top:-23%;width:38%;}
-
-
 
 .main-bl04{}
 .main-bl04 ul{}
@@ -156,11 +152,8 @@ img{max-width:100%;}
 .main-bl04 li .con .subject{font-size:20px;margin-bottom:10px;}
 .main-bl04 li:not(:first-child){margin-top:15px}
 
-
 .main-bl05 ul{display:flex;align-items:center;flex-wrap:wrap;}
 .main-bl05 ul li{width:50%;padding:20px;}
-
-
 
 .toggle-qna{}
 .toggle-qna li{border-top:1px solid rgba(0,0,0,0.16);padding:30px 0;}
@@ -174,11 +167,33 @@ img{max-width:100%;}
 .toggle-qna li .qnaContainer .bubbleBox{width:100%;background:#fff;padding:15px;border-radius:15px;box-shadow:0 3px 6px rgba(0,0,0,0.16);font-size:15px;}
 .toggle-qna li:not(.open) .qnaContainer{}
 
-
-
-
-
 .main-bl07{color:#fff;display:flex;align-items:center;min-height:280px;line-height:1.4em;}
+
+
+
+
+
+
+
+
+/*____________________________ #subpage ____________________________*/
+#subpage{}
+
+
+.infoContainer{font-size:16px;line-height:1.5em;font-weight:normal;font-family:'NanumSquareRound', sans-serif;padding-top:30px;padding-bottom:30px;}
+.infoContainer h1{font-size:22px;margin-bottom:30px;}
+.infoContainer h3{font-size:16px;}
+.infoContainer p{}
+
+.infoContainer h3 + h3{margin-top:1em;}
+.infoContainer h3 + p{margin-top:0.8em;}
+.infoContainer p + h3{margin-top:2.5em;}
+.infoContainer p + p{margin-top:1em;}
+
+
+
+
+
 
 
 

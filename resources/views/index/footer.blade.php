@@ -6,8 +6,8 @@
 			<div class="footer-top">
 				<img src="{{ asset('img/logo-footer.png')}}">
 				<div class="fmenu ml50 mlm20">
-					<a href="#">이용약관</a> | 
-					<a href="#">개인정보처리방침</a>
+					<a href="/terms/usage">이용약관</a> | 
+					<a href="/terms/privacy">개인정보처리방침</a>
 				</div>				
 			</div>
 			<div class="footer-body">

@@ -15,4 +15,12 @@ class UserController extends Controller
     {
         return view('index.index');
     }
+    public function privacy(Request $request)
+    {
+        return view('index.privacy');
+    }
+    public function usage(Request $request)
+    {
+        return view('index.usage');
+    }
 }
