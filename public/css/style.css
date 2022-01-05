@@ -42,6 +42,9 @@ select{position:relative;height:71px;font-size:24px;padding:0 20px;padding-right
 #header .inner .lang .langContainer li.active a{background:rgba(71,78,103,0.05);}
 #header .inner .lang .langContainer.open{opacity:1;visibility:visible;transform:scale(1);}
 #header.scroll{background:#0CB6AD;}
+#header:not(.main){background:#0CB6AD;}
+
+#header:not(.main) + #wrapper{padding-top:92px}
 
 
 /*____________ header ____________*/
@@ -115,15 +118,12 @@ section{position:relative;width:100%;float:left;}
 	100% {opacity:0;transform:scale(2.5);}
 }
 
-
 .main-bl02 [class*='layer-img']{position:absolute;z-index:3;}
 .main-bl02 .layer-img01{top:50%;left:50%;margin-left:-160px;margin-top:-213px}
 .main-bl02 .layer-img02{top:0;right:0}
 .main-bl02 .layer-img03{bottom:0;right:0}
 .main-bl02 .layer-img04{bottom:-30px;left:0;}
 .main-bl02 .layer-img05{top:0;left:0;}
-
-
 
 .main-bl04{}
 .main-bl04 ul{}
@@ -149,9 +149,42 @@ section{position:relative;width:100%;float:left;}
 .toggle-qna li .qnaContainer .bubbleBox{background:#fff;padding:20px 20px;border-radius:15px;box-shadow:0 3px 6px rgba(0,0,0,0.16);font-size:16px;}
 .toggle-qna li:not(.open) .qnaContainer{}
 
-
-
 .main-bl07{color:#fff;display:flex;align-items:center;min-height:725px}
+
+
+
+
+
+
+
+
+
+
+
+
+/*____________________________ #subpage ____________________________*/
+#subpage{}
+
+
+.infoContainer{font-size:13px;line-height:1.8em;font-weight:normal;font-family:'NanumSquareRound', sans-serif;padding-top:70px;padding-bottom:70px;}
+.infoContainer h1{font-size:22px;margin-bottom:30px;}
+.infoContainer h3{font-size:16px;}
+.infoContainer p{}
+
+.infoContainer h3 + h3{margin-top:1em;}
+.infoContainer h3 + p{margin-top:0.8em;}
+.infoContainer p + h3{margin-top:2.5em;}
+.infoContainer p + p{margin-top:1em;}
+
+
+
+
+
+
+
+
+
+
 
 
 

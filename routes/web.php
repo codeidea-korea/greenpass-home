@@ -15,3 +15,6 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', [UserController::class, 'index'])->name('user.index');
+
+Route::get('/terms/privacy', [UserController::class, 'privacy'])->name('user.privacy');
+Route::get('/terms/usage', [UserController::class, 'usage'])->name('user.usage');
